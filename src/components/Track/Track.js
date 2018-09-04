@@ -16,13 +16,12 @@ class Track extends Component {
   }
 
   removeTrack(event) {
-   this.props.onRemove(event.target.track);
+   this.props.onRemove(this.props.track);
 
    event.preventDefault();
   }
 
   renderAction() {
-    console.log(this.props)
     if (this.props.isRemoval === false){
       return <a className="Track-action" onClick={this.addTrack}>+</a>;
     } else {
